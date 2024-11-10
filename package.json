@@ -1,0 +1,48 @@
+{
+  "name": "@xpack/xpm-demo-hello1",
+  "version": "0.1.0",
+  "description": "A simple project to demonstrate how to use xpm",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.comxpack/xpm-demo-hello1.git"
+  },
+  "homepage": "https://github.comxpack/xpm-demo-hello1/",
+  "bugs": {
+    "url": "https://github.comxpack/xpm-demo-hello1/issues/"
+  },
+  "keywords": [
+    "xpack"
+  ],
+  "author": {
+    "name": "Liviu Ionescu",
+    "email": "ilg@livius.net",
+    "url": "https://github.com/ilg-ul"
+  },
+  "license": "MIT",
+  "config": {},
+  "dependencies": {},
+  "devDependencies": {},
+  "xpack": {
+    "minimumXpmRequired": "0.19.4",
+    "dependencies": {},
+    "devDependencies": {
+      "@xpack-dev-tools/gcc": {
+        "specifier": "14.2.0-1.1",
+        "local": "link",
+        "platforms": "all"
+      }
+    },
+    "properties": {},
+    "actions": {
+      "gcc-version": "gcc --version",
+      "prepare": "mkdir build",
+      "build": "gcc src/hello.c -o build/hello",
+      "execute": "build{{path.sep}}hello"
+    },
+    "buildConfigurations": {}
+  }
+}
