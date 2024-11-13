@@ -41,7 +41,12 @@
       "gcc-version": "gcc --version",
       "prepare": "mkdir build",
       "build": "gcc src/hello.c -o build/hello",
-      "execute": "build{{path.sep}}hello"
+      "execute": "build{{path.sep}}hello",
+      "test-ci": [
+        "xpm run prepare",
+        "xpm run build",
+        "xpm run execute"
+      ]
     },
     "buildConfigurations": {}
   }
