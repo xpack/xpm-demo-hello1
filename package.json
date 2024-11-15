@@ -30,17 +30,17 @@
     "minimumXpmRequired": "0.19.4",
     "dependencies": {},
     "devDependencies": {
-      "@xpack-dev-tools/gcc": {
-        "specifier": "14.2.0-1.1",
+      "@xpack-dev-tools/clang": {
+        "specifier": "18.1.8-2.1",
         "local": "link",
         "platforms": "all"
       }
     },
     "properties": {},
     "actions": {
-      "gcc-version": "gcc --version",
+      "cc-version": "clang --version",
       "prepare": "mkdir build",
-      "build": "gcc src/hello.c -o build/hello",
+      "build": "clang src/hello.c -o build/hello",
       "execute": "build{{path.sep}}hello",
       "test-ci": [
         "xpm run prepare",
